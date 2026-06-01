@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme{
+  /* Background Colors */
+  --color-background: #030712;
+  --color-surface: #0f172a;
+  --color-border: #1e293b;
+
+  /* Primary Colors */
+  --color-primary: #06b6d4;
+  --color-primary-hover: #22d3ee;
+
+  /* Secondary Colors */
+  --color-secondary: #8b5cf6;
+  --color-secondary-hover: #a855f7;
+
+  /* Status Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Text Colors */
+  --color-text: #ffffff;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* Radius */
+  --radius-card: 24px;
+  --radius-button: 12px;
+}
+
+/* Custom CSS Variables */
+:root {
+  --gradient-primary: linear-gradient(
+    135deg,
+    #06b6d4,
+    #22d3ee
+  );
+
+  --gradient-secondary: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #a855f7
+  );
+
+  --gradient-hero: linear-gradient(
+    135deg,
+    #030712 0%,
+    #071126 40%,
+    #0f172a 100%
+  );
+
+  --shadow-cyan: 0 0 30px rgba(6, 182, 212, 0.25);
+  --shadow-purple: 0 0 30px rgba(139, 92, 246, 0.25);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
