@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { BrowserRouter,Route,Routes,Link,NavLink} from 'react-router-dom'
+import Home from './pages/Home'
 const App = () => {
   return (
-    <div>App</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
