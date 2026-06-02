@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
-@theme{
+@theme {
   /* Background Colors */
   --color-background: #030712;
   --color-surface: #0f172a;
   --color-border: #1e293b;
+  --color-backSurface:#0A1022;
 
   /* Primary Colors */
   --color-primary: #06b6d4;
@@ -31,17 +32,9 @@
 
 /* Custom CSS Variables */
 :root {
-  --gradient-primary: linear-gradient(
-    135deg,
-    #06b6d4,
-    #22d3ee
-  );
+  --gradient-primary: linear-gradient(135deg, #06b6d4, #22d3ee);
 
-  --gradient-secondary: linear-gradient(
-    135deg,
-    #8b5cf6,
-    #a855f7
-  );
+  --gradient-secondary: linear-gradient(135deg, #8b5cf6, #a855f7);
 
   --gradient-hero: linear-gradient(
     135deg,
@@ -49,8 +42,45 @@
     #071126 40%,
     #0f172a 100%
   );
+  --gradient-text: linear-gradient(
+    135deg,
+    #22d3ee 0%,
+    #3b82f6 40%,
+    #8b5cf6 75%,
+    #d946ef 100%
+  );
+  --gradient-background: linear-gradient(
+    to bottom right,
+    #000000,
+    #050816,
+    #0A1022
+  );
 
   --shadow-cyan: 0 0 30px rgba(6, 182, 212, 0.25);
   --shadow-purple: 0 0 30px rgba(139, 92, 246, 0.25);
-  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.3);
+   --shadow-card: 0 10px 30px rgba(34, 211, 238, 0.15);
 }
+<<<<<<< HEAD
+=======
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.gradient-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(
+    135deg,
+    #00F5FF,
+    #4F46E5,
+    #A855F7
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+>>>>>>> 1315b70a0c608be66b03eb484171e85560c3bea7

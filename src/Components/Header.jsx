@@ -59,7 +59,7 @@ const navLinks = [
 const Header = () => {
   const [isShow, setIsShow] = useState(false);
   return (
-    <header className="relative bg-black  w-full text-white">
+    <header className="relative border-b border-border bg-black  w-full text-white">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center gap-30">
         <img src={logo} className="w-60 " alt="" />
         {/* menubar */}
@@ -72,7 +72,7 @@ const Header = () => {
           {navLinks.map((link) => (
             <NavLink
               className={({ isActive }) =>
-                `${isActive ? "text-primary-hover" : ""} hover:text-primary-hover  transition duration-200 capitalize cursor-pointer ml-4`
+                `${isActive ? "text-primary-hover" : ""} hover:text-primary-hover  transition duration-200 capitalize cursor-pointer ml-2`
               }
               key={link.id}
               to={link.path}
@@ -83,7 +83,7 @@ const Header = () => {
           <Link to={"/login"}>
             <Button
               name="Login"
-              style={"text-white bg-transparent border border-primary-hover"}
+              style={"text-white bg-transparent border-2 border-border"}
             />
           </Link>
           <Link to={"/register"}>
@@ -95,7 +95,7 @@ const Header = () => {
         </div>
         {/* mobile links */}
         {isShow && (
-          <div className="fixed p-2 border-r-2 z-10 bg-black border-blue-300/40 w-80 left-0 h-full top-0">
+          <div className="fixed p-2 border-r-1 z-10 bg-black border-border w-80 left-0 h-full top-0">
             <div>
               <img src={logo} className="w-50 " alt="" />
               <div className="flex flex-col justify-between items-center">
