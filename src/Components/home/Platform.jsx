@@ -15,7 +15,7 @@ const platformFeatures = [
     title: "Student Directory",
     description: "Discover talented developers and connect with peers.",
     icon: FaUsers,
-    path:"/student"
+    path:"/students"
   },
 
   {

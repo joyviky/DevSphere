@@ -3,12 +3,19 @@ import { BrowserRouter,Route,Routes,Link,NavLink} from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Students from './pages/Students'
+import StudentProfile from './pages/StudentProfile'
+import StudentDashborad from './pages/StudentDashborad'
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/students' element={<Students/>}/>
+        <Route path='/students/:id' element={<StudentProfile/>}/>
+        <Route path='/' element={<StudentDashborad/>}/>
         <Route path='/login' element={<Login/>}/>
       </Routes>
     </BrowserRouter>

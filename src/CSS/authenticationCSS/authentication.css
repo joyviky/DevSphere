@@ -30,7 +30,7 @@
   --radius-button: 12px;
 }
 
-/* Custom CSS Variables */
+
 :root {
   --gradient-primary: linear-gradient(135deg, #06b6d4, #22d3ee);
 
@@ -60,8 +60,6 @@
   --shadow-purple: 0 0 30px rgba(139, 92, 246, 0.25);
    --shadow-card: 0 10px 30px rgba(34, 211, 238, 0.15);
 }
-<<<<<<< HEAD
-=======
 .gradient-text {
   background: var(--gradient-text);
   -webkit-background-clip: text;
@@ -82,5 +80,6 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
-
->>>>>>> 1315b70a0c608be66b03eb484171e85560c3bea7
+.cardBtn{
+  @apply px-4 py-2 rounded-xl bg-[#13131d] border border-cyan-500/20 hover:border-cyan-400 hover:bg-[#1a1a25] transition-all disabled:opacity-40 disabled:cursor-not-allowed
+}
