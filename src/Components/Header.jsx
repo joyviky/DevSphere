@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { logo } from "../assets/images";
 import { Link, NavLink } from "react-router-dom";
 import Button from "./buttons/Button";
-import { FaBarsStaggered, FaPhone } from "react-icons/fa6";
+import { FaBars, FaPhone } from "react-icons/fa";
 import { RiBloggerLine, RiContactsLine, RiGalleryFill, RiHomeHeartLine } from "react-icons/ri";
 import { PiStudentBold } from "react-icons/pi";
 import { TfiThemifyFavicon } from "react-icons/tfi";
@@ -63,7 +63,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center gap-30">
         <img src={logo} className="w-60 " alt="" />
         {/* menubar */}
-        <FaBarsStaggered
+        <FaBars
           onClick={() => setIsShow(!isShow)}
           className="lg:hidden size-6 cursor-pointer mr-4"
         />
@@ -95,7 +95,7 @@ const Header = () => {
         </div>
         {/* mobile links */}
         {isShow && (
-          <div className="fixed p-2 border-r-1 z-10 bg-black border-border w-80 left-0 h-full top-0">
+          <div className="fixed p-2 border-r-1 z-1001 bg-black border-border w-80 left-0 h-full top-0">
             <div>
               <img src={logo} className="w-50 " alt="" />
               <div className="flex flex-col justify-between items-center">
@@ -125,7 +125,7 @@ const Header = () => {
         {isShow && (
           <div
             onClick={() => setIsShow(!isShow)}
-            className="fixed inset-0 w-full h-full bg-black/55"
+            className="fixed z-1000 inset-0 w-full h-full bg-black/55"
           ></div>
         )}
       </div>

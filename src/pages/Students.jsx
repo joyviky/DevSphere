@@ -4,6 +4,7 @@ import Countup from '../Components/home/Countup'
 import StudentCards from '../Components/students/StudentCards'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
+import Carousel from '../Components/students/Carousel'
 
 const Students = () => {
   return (
@@ -11,6 +12,7 @@ const Students = () => {
         <Header/>
         <StudentHero/>
         <Countup/>
+        <Carousel/>
         <StudentCards/>
         <Footer/>
     </div>

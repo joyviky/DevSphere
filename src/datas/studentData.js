@@ -1,3 +1,4 @@
+
 export const studentsData = [
   {
     id: 1,
@@ -195,3 +196,259 @@ export const studentsData = [
     link: "/students/13",
   },
 ];
+export const studentProfile =[
+  {
+  id: 1,
+
+  // Personal Information
+  name: "Vignesh T",
+  role: "Full Stack Developer",
+  dob: "27/08/2005",
+  branch: "Computer Science and Engineering (CSE)",
+  college: "SSM Institute of Engineering and Technology",
+  year: "Third Year",
+  location: "Karur, Tamil Nadu",
+
+  // Contact
+  email: "vignesh4485849@gamil.com", // Add your email
+  portfolio: "", // Add after deployment
+  github: "https://github.com/joyviky",
+  githubUsername: "joyviky",
+  
+
+  linkedin: "https://www.linkedin.com/in/vignesh-t-652742412",
+
+  medium: "https://medium.com/@vignesh4485849",
+  mediumUsername: "vignesh4485849",
+  mediumName: "Vignesh",
+
+  leetcode: "https://leetcode.com/u/Joy_boy485/",
+  leetcodeUsername: "Joy_boy485",
+
+  // Images
+  image: "https://i.pravatar.cc/300?img=1",
+  cover: "https://picsum.photos/400/200?random=1",
+
+  // About
+  about:
+    "Passionate Full Stack Developer and Computer Science student focused on building scalable MERN Stack applications, AI-powered platforms, and modern web experiences. I enjoy transforming ideas into real-world products, writing technical blogs, exploring new technologies, and continuously improving my problem-solving skills through development and coding challenges. My interests include frontend engineering, backend architecture, developer tools, artificial intelligence, and creating impactful digital solutions.",
+
+  // Statistics
+  projects: 12,
+  blogs: 8,
+  followers: 320,
+  following:180,
+  repos:22,
+
+  // Education
+  education: [
+    {
+      degree: "Bachelor of Engineering",
+      branch: "Computer Science and Engineering",
+      institution: "SSM Institute of Engineering and Technology",
+      status: "Pursuing",
+      year: "3rd Year",
+    },
+  ],
+
+  // Skills
+  skills: [
+  { name: "React.js", percentage: 90 },
+  { name: "Node.js", percentage: 85 },
+  { name: "MongoDB", percentage: 80 },
+  { name: "JavaScript", percentage: 92 },
+  { name: "Tailwind CSS", percentage: 95 },
+  { name: "Problem Solving", percentage: 88 },
+],
+
+  // Tech Stack
+  techStacks: [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "Git",
+    "GitHub",
+    "REST API",
+    "Framer Motion",
+    "GSAP",
+    "Redux Toolkit",
+    "JWT",
+    "Firebase",
+    "Vercel",
+    "Netlify",
+    "Postman",
+    "VS Code",
+    "Figma",
+  ],
+
+  // Achievements
+  achievements: [
+    "Built multiple MERN Stack applications",
+    "Published technical blogs on web development",
+    "Active GitHub contributor",
+    "Learning advanced frontend animations using GSAP and Framer Motion",
+    "Building AI-powered applications and developer tools",
+    "Developing real-world full-stack solutions",
+    "Practicing Data Structures and Algorithms on LeetCode",
+    "Created dynamic portfolio and personal branding projects",
+  ],
+
+  // Interests
+  interests: [
+    "Full Stack Development",
+    "Artificial Intelligence",
+    "Frontend Engineering",
+    "Backend Development",
+    "UI/UX Design",
+    "Technical Writing",
+    "Open Source",
+    "Developer Productivity",
+  ],
+
+  // Social Links
+  socials: {
+    github: "https://github.com/joyviky",
+    linkedin: "https://www.linkedin.com/in/vignesh-t-652742412",
+    medium: "https://medium.com/@vignesh4485849",
+    leetcode: "https://leetcode.com/u/Joy_boy485/",
+  },
+
+  // Resume
+  resume: "/resume/Vignesh_Resume.pdf",
+
+  // Status
+  verified: true,
+  online: true,
+  availableForWork: true,
+
+  // Navigation
+  link: "/students/1",
+},
+{
+  id: 2,
+
+  // Personal Information
+  name: "Vignesh T",
+  role: "Full Stack Developer",
+  dob: "27/08/2005",
+  branch: "Computer Science and Engineering (CSE)",
+  college: "SSM Institute of Engineering and Technology",
+  year: "Third Year",
+  location: "Karur, Tamil Nadu, India",
+
+  // Contact
+  email: "", // Add your email
+  portfolio: "", // Add after deployment
+  github: "https://github.com/joyviky",
+  githubUsername: "joyviky",
+  githubName: "joyviky",
+
+  linkedin: "https://www.linkedin.com/in/vignesh-t-652742412",
+
+  medium: "https://medium.com/@vignesh4485849",
+  mediumUsername: "vignesh4485849",
+  mediumName: "Vignesh",
+
+  leetcode: "https://leetcode.com/u/Joy_boy485/",
+  leetcodeUsername: "Joy_boy485",
+
+  // Images
+  image: "/images/profile.png",
+  cover: "/images/profile-cover.jpg",
+
+  // About
+  about:
+    "Passionate Full Stack Developer and Computer Science student focused on building scalable MERN Stack applications, AI-powered platforms, and modern web experiences. I enjoy transforming ideas into real-world products, writing technical blogs, exploring new technologies, and continuously improving my problem-solving skills through development and coding challenges. My interests include frontend engineering, backend architecture, developer tools, artificial intelligence, and creating impactful digital solutions.",
+
+  // Statistics
+  projects: 12,
+  blogs: 8,
+  followers: 320,
+
+  // Education
+  education: [
+    {
+      degree: "Bachelor of Engineering",
+      branch: "Computer Science and Engineering",
+      institution: "SSM Institute of Engineering and Technology",
+      status: "Pursuing",
+      year: "3rd Year",
+    },
+  ],
+
+  // Skills
+  skills: [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "HTML5",
+    "CSS3",
+  ],
+
+  // Tech Stack
+  techStacks: [
+    "React",
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "Git",
+    "GitHub",
+    "REST API",
+   
+  ],
+
+  // Achievements
+  achievements: [
+    "Built multiple MERN Stack applications",
+    "Published technical blogs on web development",
+    "Active GitHub contributor",
+    "Learning advanced frontend animations using GSAP and Framer Motion",
+    "Building AI-powered applications and developer tools",
+    "Developing real-world full-stack solutions",
+    "Practicing Data Structures and Algorithms on LeetCode",
+    "Created dynamic portfolio and personal branding projects",
+  ],
+
+  // Interests
+  interests: [
+    "Full Stack Development",
+    "Artificial Intelligence",
+    "Frontend Engineering",
+    "Backend Development",
+    "UI/UX Design",
+    "Technical Writing",
+    "Open Source",
+    "Developer Productivity",
+  ],
+
+  // Social Links
+  socials: {
+    github: "https://github.com/joyviky",
+    linkedin: "https://www.linkedin.com/in/vignesh-t-652742412",
+    medium: "https://medium.com/@vignesh4485849",
+    leetcode: "https://leetcode.com/u/Joy_boy485/",
+  },
+
+  // Resume
+  resume: "/resume/Vignesh_Resume.pdf",
+
+  // Status
+  verified: true,
+  online: true,
+  availableForWork: true,
+
+  // Navigation
+  link: "/students/1",
+}
+]

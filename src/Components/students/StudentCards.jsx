@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { studentsData } from "../../datas/studentData";
 import { Link } from "react-router-dom";
-import { FaLocationDot } from "react-icons/fa6";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const data = studentsData;
 
@@ -18,53 +15,15 @@ const StudentCards = () => {
   const slicedData = studentsData.slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(totalCards / cardPerPage);
 
-  // slick settings
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    pauseOnHover: true,
-    arrows: false,
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-  console.log(Slider);
   return (
-    <div className="bg-[#0c0c12] text-white py-10">
-      <div className="w-fit mx-auto mb-10 px-6 py-3 rounded-2xl border border-cyan-500/20 bg-[#13131d] flex items-center gap-3">
+    <div className="bg-[#000000] border-b border-border text-white py-10">
+      <div className="w-fit mx-auto mb-10 px-6 py-3 rounded-2xl border border-cyan-500/20 bg-[#13131d] flex items-center gap-3 text-center">
         <p className="text-gray-400 text-sm">Total Students :</p>
 
         <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent text-center">
           {totalCards}
         </h1>
       </div>
-
-      {/* slick */}
-
-     {/* <Slider {...settings}>
-        {
-            data.map((card)=>(
-                <StudentCard key={card.id} card={card}/>
-            ))
-        }
-     </Slider> */}
 
       <div className="w-full max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-between  gap-5 ">
         {slicedData.map((data) => (
@@ -124,7 +83,7 @@ function StudentCard({ card }) {
         <h3 className="text-white text-lg font-semibold my-2">{card.name}</h3>
         <p className="text-gray-400 text-sm my-2">{card.role}</p>
         <p className="text-gray-500 text-xs mt-1 flex my-2 items-center gap-2 justify-center">
-          <FaLocationDot />
+          <FaMapMarkerAlt />
           {card.college}
         </p>
         {/* skills */}

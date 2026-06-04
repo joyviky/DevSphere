@@ -73,7 +73,7 @@ const Career = () => {
            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
              {
                 features.map(item=>(
-                    <div className='flex items-start mx-auto gap-4 rounded-2xl text-text-secondary border-2 border-border max-w-90 p-5 hover:shadow-[0_15px_40px_rgba(34,211,238,0.12)] hover:border-cyan-400/20 hover:bg-white/[0.02] transition-all duration-300 hover:scale-105'>
+                  <div key={item.id} className='flex items-start mx-auto gap-4 rounded-2xl text-text-secondary border-2 border-border max-w-90 p-5 hover:shadow-[0_15px_40px_rgba(34,211,238,0.12)] hover:border-cyan-400/20 hover:bg-white/[0.02] transition-all duration-300 hover:scale-105'>
                         {/* icon */}
                         <div>
                             <item.icon className={`${item.color} text-5xl p-2 rounded-lg `}/>

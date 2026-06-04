@@ -5,7 +5,7 @@
   --color-background: #030712;
   --color-surface: #0f172a;
   --color-border: #1e293b;
-  --color-backSurface:#0A1022;
+  --color-backSurface: #0a1022;
 
   /* Primary Colors */
   --color-primary: #06b6d4;
@@ -28,8 +28,9 @@
   /* Radius */
   --radius-card: 24px;
   --radius-button: 12px;
-}
 
+  --color-backSurface: #191932;
+}
 
 :root {
   --gradient-primary: linear-gradient(135deg, #06b6d4, #22d3ee);
@@ -53,12 +54,12 @@
     to bottom right,
     #000000,
     #050816,
-    #0A1022
+    #0a1022
   );
 
   --shadow-cyan: 0 0 30px rgba(6, 182, 212, 0.25);
   --shadow-purple: 0 0 30px rgba(139, 92, 246, 0.25);
-   --shadow-card: 0 10px 30px rgba(34, 211, 238, 0.15);
+  --shadow-card: 0 10px 30px rgba(34, 211, 238, 0.15);
 }
 .gradient-text {
   background: var(--gradient-text);
@@ -70,16 +71,18 @@
 .gradient-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(
-    135deg,
-    #00F5FF,
-    #4F46E5,
-    #A855F7
-  );
+  background: linear-gradient(135deg, #00f5ff, #4f46e5, #a855f7);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-.cardBtn{
-  @apply px-4 py-2 rounded-xl bg-[#13131d] border border-cyan-500/20 hover:border-cyan-400 hover:bg-[#1a1a25] transition-all disabled:opacity-40 disabled:cursor-not-allowed
+.cardBtn {
+  @apply px-4 py-2 rounded-xl bg-[#13131d] border border-cyan-500/20 hover:border-cyan-400 hover:bg-[#1a1a25] transition-all disabled:opacity-40 disabled:cursor-not-allowed;
+}
+.cardEffect {
+  border-radius: 0;
+  background: red;
+}
+.arrow {
+  @apply absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-300 group-hover:bg-cyan-500 group-hover:text-black ;
 }

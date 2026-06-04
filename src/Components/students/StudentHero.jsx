@@ -2,7 +2,7 @@ import React from "react";
 import { globe } from "../../assets/images";
 import { Link } from "react-router-dom";
 import Button from "../buttons/Button";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 const StudentHero = () => {
   return (

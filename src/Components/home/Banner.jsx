@@ -2,7 +2,7 @@ import React from "react";
 import { laptop } from "../../assets/images";
 import { Link } from "react-router-dom";
 import Button from "../buttons/Button";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -23,7 +23,7 @@ const Banner = () => {
           <Link to={"/contact"}>
             <Button
               name="Create Account"
-              icon={<FaArrowRightLong />}
+              icon={<FaArrowRight />}
               style={
                 "text-black flex items-center gap-3 bg-primary border transform hover:-translate-y-1 transition duration-200 border-primary-hover"
               }

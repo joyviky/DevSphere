@@ -1,14 +1,17 @@
 import React from 'react'
 import {logo} from "../assets/images"
 import { IoLogoGithub } from 'react-icons/io'
-import { FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa6'
+import { FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { FaTwitch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { LuSend } from 'react-icons/lu'
 
 const icons=[
-  {id:1,icon:<IoLogoGithub/>,path:""},{id:2,icon:<FaLinkedinIn/>,path:""},{id:1,icon:<FaYoutube/>,path:""},{id:1,icon:<FaTwitter/>,path:""}
-]
+  { id: 1, icon: <IoLogoGithub />, path: "" },
+  { id: 2, icon: <FaLinkedin />, path: "" },
+  { id: 3, icon: <FaYoutube />, path: "" },
+  { id: 4, icon: <FaTwitter />, path: "" },
+];
 
 
 const Footer = () => {
