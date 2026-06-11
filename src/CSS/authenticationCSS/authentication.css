@@ -86,3 +86,9 @@
 .arrow {
   @apply absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-300 group-hover:bg-cyan-500 group-hover:text-black ;
 }
+.res{
+  @apply  max-w-7xl mx-auto px-5;
+}
+.outer{
+  @apply bg-black text-white py-10 px-5;
+}

@@ -7,6 +7,7 @@ import Footer from './Components/Footer'
 import Students from './pages/Students'
 import StudentProfile from './pages/StudentProfile'
 import StudentDashborad from './pages/StudentDashborad'
+import Register from './pages/Register'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/students/:id' element={<StudentProfile/>}/>
         <Route path='/' element={<StudentDashborad/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
       </Routes>
     </BrowserRouter>
   

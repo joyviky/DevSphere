@@ -69,7 +69,7 @@ const Platform = () => {
         <h1 className="text-center text-4xl mt-3 font-extralight capitalize mb-20">
           All the tools you need in one place
         </h1>
-        <div className="flex flex-wrap gap-5 lg:gap-0">
+        <div className="flex flex-wrap gap-5 lg:gap-0 ">
           {platformFeatures.map((card) => {
             const Icon = card.icon;
 
