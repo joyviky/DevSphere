@@ -20,7 +20,7 @@ const StudentProfile = () => {
   return (
     <div>
       <Header/>
-      <ProfileHero student={student}/>
+      <ProfileHero student={student} id={id}/>
       <ProjectCount project={student.projects} blogs={student.blogs} repos={student.repos} followers={student.followers} following={student.following}/>
       <StudentAbout student={student}/>
       <GithubActivity student={student}/>

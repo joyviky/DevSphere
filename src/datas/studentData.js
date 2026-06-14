@@ -210,6 +210,7 @@ export const studentProfile =[
   location: "Karur, Tamil Nadu",
 
   // Contact
+  bio:"Passinate Full Stack Developer | MERN Stack Enthusiast | DSA Learner | Open Source Contributer | Always learning something new",
   email: "vignesh4485849@gamil.com", // Add your email
   portfolio: "", // Add after deployment
   github: "https://github.com/joyviky",

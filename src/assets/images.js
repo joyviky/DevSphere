@@ -5,4 +5,5 @@ import globe from "./authenticationImg/globe.png"
 import robo_paiyan from "./authenticationImg/robo_pai.png";
 import earth from "./authenticationImg/earth.png"
 import comma from "./authenticationImg/comma.png"
-export {logo,heroImg,laptop,globe,robo_paiyan,comma,earth};
+import std_hero from "./authenticationImg/st_hero.png"
+export {logo,heroImg,laptop,globe,robo_paiyan,comma,earth,std_hero};

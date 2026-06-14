@@ -8,8 +8,10 @@ import {
 import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 import mount from "../../assets/authenticationImg/mount1.png";
+import { useNavigate } from "react-router-dom";
 
-const ProfileHero = ({ student }) => {
+const ProfileHero = ({ student,id }) => {
+  const navigate=useNavigate();
   return (
     <div className="relative w-full  py-10 text-white overflow-hidden">
       {/* Blurred Background Image */}
@@ -77,7 +79,7 @@ const ProfileHero = ({ student }) => {
             </div>
 
             <div className="mt-1 flex flex-wrap gap-4">
-              <button className="bg-primary px-5 py-2 rounded-md cursor-pointer text-black text-lg font-medium">
+              <button onClick={()=>{navigate(`/students/${id}/std_edit`)}} className="bg-primary px-5 py-2 rounded-md cursor-pointer text-black text-lg font-medium">
                 <MdEdit className="inline-block text-2xl mr-2" />
                 Edit Profile
               </button>

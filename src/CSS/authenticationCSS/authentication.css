@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+html {
+  @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-black;
+}
 @theme {
   /* Background Colors */
   --color-background: #030712;
@@ -90,5 +92,5 @@
   @apply  max-w-7xl mx-auto px-5;
 }
 .outer{
-  @apply bg-black text-white py-10 px-5;
+  @apply bg-black text-white py-5 px-5;
 }

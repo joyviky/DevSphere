@@ -8,6 +8,7 @@ import Students from './pages/Students'
 import StudentProfile from './pages/StudentProfile'
 import StudentDashborad from './pages/StudentDashborad'
 import Register from './pages/Register'
+import Student_EditProfile from './pages/Student_EditProfile'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='/' element={<StudentDashborad/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/students/:id/std_edit' element={<Student_EditProfile/>}/>
       </Routes>
     </BrowserRouter>
   
