@@ -10,6 +10,7 @@ import StudentDashborad from './pages/StudentDashborad'
 import Register from './pages/Register'
 import Student_EditProfile from './pages/Student_EditProfile'
 import Blogs from './pages/Blogs'
+import Gallery from './pages/Gallery'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
     <Route path='/register' element={<Register/>}/>
     <Route path='/students/:id/std_edit' element={<Student_EditProfile/>}/>
     <Route path='/blogs' element={<Blogs/>}/>   
+    <Route path='/gallery' element={<Gallery/>}/>
   </Routes>
 </BrowserRouter>
   

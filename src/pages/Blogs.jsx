@@ -3,7 +3,7 @@ import Blog_Hero from '../Components/blogs/Blog_Hero'
 import Header from '../Components/Header'
 import Footer from '../Components/Footer'
 import Blog_countUp from '../Components/blogs/Blog_countUp'
-import Blog_Section from '../Components/std_EditProfile/Blog_Section'
+import Blog_Section from '../Components/blogs/Blog_Section'
 
 const Blogs = () => {
   return (
