@@ -9,20 +9,22 @@ import StudentProfile from './pages/StudentProfile'
 import StudentDashborad from './pages/StudentDashborad'
 import Register from './pages/Register'
 import Student_EditProfile from './pages/Student_EditProfile'
+import Blogs from './pages/Blogs'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/students' element={<Students/>}/>
-        <Route path='/students/:id' element={<StudentProfile/>}/>
-        <Route path='/' element={<StudentDashborad/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/students/:id/std_edit' element={<Student_EditProfile/>}/>
-      </Routes>
-    </BrowserRouter>
+  <Routes>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/students' element={<Students/>}/>
+    <Route path='/students/:id' element={<StudentProfile/>}/>
+    <Route path='/dashboard' element={<StudentDashborad/>}/>   
+    <Route path='/login' element={<Login/>}/>
+    <Route path='/register' element={<Register/>}/>
+    <Route path='/students/:id/std_edit' element={<Student_EditProfile/>}/>
+    <Route path='/blogs' element={<Blogs/>}/>   
+  </Routes>
+</BrowserRouter>
   
   )
 }

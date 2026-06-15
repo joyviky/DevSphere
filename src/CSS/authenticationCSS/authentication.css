@@ -81,6 +81,10 @@ html {
 .cardBtn {
   @apply px-4 py-2 rounded-xl bg-[#13131d] border border-cyan-500/20 hover:border-cyan-400 hover:bg-[#1a1a25] transition-all disabled:opacity-40 disabled:cursor-not-allowed;
 }
+.blogBtn{
+  @apply px-4 py-2 rounded-xl bg-secondary/10 border border-secondary/40 hover:border-secondary/60 hover:bg-[#1a1a25] transition-all disabled:opacity-40 disabled:cursor-not-allowed;
+
+}
 .cardEffect {
   border-radius: 0;
   background: red;
@@ -93,4 +97,10 @@ html {
 }
 .outer{
   @apply bg-black text-white py-5 px-5;
+}
+.slick-dots{
+  position: absolute;
+  bottom: 5px;
+  z-index: 1;
+
 }
