@@ -244,7 +244,7 @@ function FirstFiveBlogs({ blogs }) {
           className="rounded-sm absolute inset-0 w-full h-full object-cover -z-10 overflow-hidden"
         />
         <div className="flex flex-col absolute bottom-8">
-          <h2 className="text-xl ">{Fiveblogs[currentBlog].title}</h2>
+          <h2 className="text-xl">{Fiveblogs[currentBlog].title}</h2>
           <div className="flex gap-3">
             <p className="text-xs mt-5">{Fiveblogs[currentBlog].author}</p>
             <p className="text-xs mt-5">

@@ -29,7 +29,7 @@ const Carousal_imgs = () => {
   return (
     <div className='relative w-full  max-w-200  h-100 overflow-hidden mx-auto my-40 '>
         <div className=''>
-            <img key={current} src={images[current]} alt="img" className='w-full h-full object-cover animate-fade'/>
+            <img key={current} src={images[current]} alt="img" loading="lazy" decoding="async" className='w-full h-full object-cover animate-fade'/>
         </div>
         <div className='absolute z-1 bottom-0  w-full   flex justify-between  top-1/2 -translate-y-1/2 items-center px-5'>
          <button onClick={prevImage} className='text-3xl text-white/80 bg-white/10 rounded-full h-10 w-10 text-center cursor-pointer hover:bg-white/30 duration-300 grid place-content-center'><IoIosArrowBack/></button>
