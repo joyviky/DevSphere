@@ -18,6 +18,7 @@ const Home = () => {
         <Community/>
         <Banner/>
         <Footer/>
+         
     </div>
   )
 }

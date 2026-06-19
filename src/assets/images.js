@@ -8,4 +8,7 @@ import comma from "./authenticationImg/comma.png"
 import std_hero from "./authenticationImg/st_hero.png"
 import blog_hero from "./authenticationImg/blog_hero.png"
 import gallery_img from "./authenticationImg/gallery_img.png"
-export {logo,blog_hero,heroImg,laptop,globe,robo_paiyan,comma,earth,std_hero,gallery_img};
+import feature_hero from "./authenticationImg/Feature_hero.png"
+import earth_bg from "./authenticationImg/earth_bg.png"
+
+export {logo,blog_hero,heroImg,laptop,globe,robo_paiyan,comma,earth,std_hero,gallery_img,feature_hero,earth_bg};
