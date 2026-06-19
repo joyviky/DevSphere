@@ -12,6 +12,7 @@ import Student_EditProfile from './pages/Student_EditProfile'
 import Blogs from './pages/Blogs'
 import Gallery from './pages/Gallery'
 import Features from './pages/Features'
+import Contact from './pages/Contact'
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
     <Route path='/blogs' element={<Blogs/>}/>   
     <Route path='/gallery' element={<Gallery/>}/>
     <Route path='/features' element={<Features/>}/>
+    <Route path='' element={<Contact/>}/>
   </Routes>
 </BrowserRouter>
   
