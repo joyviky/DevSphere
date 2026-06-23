@@ -9,6 +9,7 @@ import { TfiThemifyFavicon } from "react-icons/tfi";
 import { FaInfoCircle } from "react-icons/fa";
 import { LuLogIn, LuLogOut } from "react-icons/lu";
 import { GiCondorEmblem } from "react-icons/gi";
+import {motion} from "framer-motion"
 
 const navLinks = [
   {
@@ -47,19 +48,19 @@ const navLinks = [
     name: "About",
     icon:<GiCondorEmblem/>
   },
-  {
-    id: 9,
-    path: "/contact",
-    name: "Contact",
-    icon:<RiContactsLine/>
+  // {
+  //   id: 9,
+  //   path: "/contact",
+  //   name: "Contact",
+  //   icon:<RiContactsLine/>
     
-  },
+  // },
 ];
 
 const Header = () => {
   const [isShow, setIsShow] = useState(false);
   return (
-    <header className="relative border-b border-border bg-black  w-full text-white">
+    < motion.header initial={{y:-100}} animate={{y:0}} transition={{type:"spring",stiffness:120}} className="relative border-b border-border bg-black  w-full text-white">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center gap-30">
         <img src={logo} className="w-60 " alt="" />
         {/* menubar */}
@@ -129,7 +130,7 @@ const Header = () => {
           ></div>
         )}
       </div>
-    </header>
+    </ motion.header>
   );
 };
 

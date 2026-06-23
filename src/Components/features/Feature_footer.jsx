@@ -1,9 +1,10 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { earth_bg } from "../../assets/images"
 
 const Feature_footer = () => {
   return (
-    <div>
+    <motion.div initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration:0.7 }} viewport={{ once: true }}>
       <div className="relative h-72 sm:h-96 md:h-[500px] w-full overflow-hidden">
         <img 
           src={earth_bg} 
@@ -33,7 +34,7 @@ const Feature_footer = () => {
 
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import CountUpLib from 'react-countup'
 const CountUp = CountUpLib.default || CountUpLib
 
@@ -17,7 +18,7 @@ const ProjectCount = ({
     { id: 5, number: following, title: "Following" },
   ];
   return (
-    <div className="bg-black w-full  text-white ">
+    <motion.div initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="bg-black w-full  text-white ">
       <div className="w-full max-w-7xl mx-auto bg-[#0d0d1c] p-5 rounded-2xl">
         <p className="uppercase mb-10 font-semibold text-primary text-center">
           Profile Overview
@@ -35,7 +36,7 @@ const ProjectCount = ({
           }
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

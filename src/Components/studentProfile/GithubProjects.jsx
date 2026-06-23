@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 import { FaGithub, FaRegStar } from "react-icons/fa";
 import { FiCalendar } from "react-icons/fi";
 
@@ -24,7 +25,7 @@ const GithubProjects = ({ student }) => {
   console.log(totalRepo);
 
   return (
-    <div className="bg-black text-white py-10">
+    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: true }} className="bg-black text-white py-10">
       <div className="w-full max-w-7xl mx-auto bg-purple-400/10 p-10">
         <h1 className="text-3xl font-semibold mb-10">Github Repos</h1>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center">
@@ -33,13 +34,13 @@ const GithubProjects = ({ student }) => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 function SingleProject({ repo }) {
   return (
     <a href={repo.html_url} target="_blank " className="group inline-block w-80 mx-auto">
-      <div className="text-white p-3 border border-secondary rounded-md max-w-80 flex items-center gap-3 h-25 transition-all duration-300 ease-in-out group-hover:-translate-y-2 group-hover:border-purple-400 group-hover:shadow-[0_10px_30px_rgba(168,85,247,0.4)] group-hover:bg-purple-400/30 bg-black">
+      <motion.div whileHover={{ y: -6 }} className="text-white p-3 border border-secondary rounded-md max-w-80 flex items-center gap-3 h-25 transition-all duration-300 ease-in-out group-hover:border-purple-400 group-hover:shadow-[0_10px_30px_rgba(168,85,247,0.4)] group-hover:bg-purple-400/30 bg-black">
         <div className="bg-purple-300 p-2 rounded-sm">
           <FaGithub className="text-2xl " />
         </div>
@@ -63,7 +64,7 @@ function SingleProject({ repo }) {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </a>
   );
 }

@@ -2,11 +2,11 @@
 export const studentsData = [
   {
     id: 1,
-    name: "Vignesh R",
+    name: "Vignesh T",
     role: "Full Stack Developer",
     college: "VIT Chennai",
-    image: "https://i.pravatar.cc/300?img=1",
-    cover: "https://picsum.photos/400/200?random=1",
+    image: "https://www.image2url.com/r2/default/images/1782204512404-67979833-3184-46dd-b47f-e56b1f867209.jpeg",
+    cover: "https://www.image2url.com/r2/default/images/1782204945367-ee8a9da3-ac53-46de-ae20-b0696f3aed16.jpg",
     skills: ["React", "Next.js", "TypeScript"],
     projects: 12,
     blogs: 8,
@@ -227,7 +227,7 @@ export const studentProfile =[
   leetcodeUsername: "Joy_boy485",
 
   // Images
-  image: "https://i.pravatar.cc/300?img=1",
+  image: "https://www.image2url.com/r2/default/images/1782204512404-67979833-3184-46dd-b47f-e56b1f867209.jpeg",
   cover: "https://picsum.photos/400/200?random=1",
 
   // About
@@ -320,7 +320,7 @@ export const studentProfile =[
   },
 
   // Resume
-  resume: "/resume/Vignesh_Resume.pdf",
+  resume: "https://www.image2url.com/r2/default/documents/1782206055909-17dff336-c0e1-4a9e-82f4-4b00e6b6a017.pdf",
 
   // Status
   verified: true,

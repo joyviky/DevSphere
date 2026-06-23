@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { studentsData } from "../../datas/studentData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -12,7 +13,7 @@ const data = studentsData;
 const Carousel = () => {
   // slick settings
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 800,
     slidesToShow: 1,
@@ -20,7 +21,7 @@ const Carousel = () => {
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
-    arrows: true,
+    arrows: false,
 
     responsive: [
       {
@@ -47,11 +48,17 @@ const Carousel = () => {
   console.log("SliderComponent resolved:", SliderComponent);
 
   return (
-    <div className="w-full bg-[#000000] py-20 border-b border-border text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45 }}
+      viewport={{ once: true }}
+      className="w-full bg-[#000000] py-20 border-b border-border text-center"
+    >
       <div className="">
-     <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-  Featured Student Developers
-</h1>
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-300 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+          Featured Student Developers
+        </h1>
 
         <p className="text-gray-400 text-center max-w-2xl mx-auto mt-2 text-sm mb-10 px-5">
           Discover talented student developers, explore their projects, skills,
@@ -75,12 +82,14 @@ const Carousel = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 function StudentCard({ card }) {
   return (
-    <div className="w-60 h-80 relative overflow-hidden rounded-4xl border border-white/20 bg-[#111] group cursor-pointer  mx-auto transition-all duration-500 hover:border-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.35)]">
+    <motion.div
+      className="w-60 h-80 relative overflow-hidden rounded-4xl border border-white/20 bg-[#111] group cursor-pointer  mx-auto transition-all duration-500 hover:border-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.35)]"
+    >
       <img
         src={card.image}
         alt={card.name}
@@ -105,7 +114,7 @@ function StudentCard({ card }) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

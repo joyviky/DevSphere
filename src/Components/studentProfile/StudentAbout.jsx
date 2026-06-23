@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from 'framer-motion'
 import { FaRegCalendarAlt, FaRegUser, FaUniversity } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaCodeBranch, FaGlobe } from "react-icons/fa";
@@ -8,7 +9,7 @@ import { FaBuildingColumns } from "react-icons/fa6";
 
 const StudentAbout = ({ student }) => {
   return (
-    <div className="bg-black">
+    <motion.div initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }} className="bg-black">
       <div className="w-full max-w-7xl mx-auto pt-10 text-white flex flex-col gap-10 md:flex-row">
         {/* left */}
         <div className="bg-backSurface max-w-md sm:max-w-xl mx-auto rounded-md p-5">
@@ -146,7 +147,7 @@ const StudentAbout = ({ student }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

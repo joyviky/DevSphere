@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import img1 from '../../assets/flowers/1.png'
 import img2 from '../../assets/flowers/2.jpg'
 import img3 from '../../assets/flowers/3.jpg'
@@ -26,11 +27,11 @@ const Carousal_imgs = () => {
     },5000);
     return ()=>clearInterval(timer);
    },[images.length])
-  return (
-    <div className='relative w-full  max-w-200  h-100 overflow-hidden mx-auto my-40 '>
-        <div className=''>
-            <img key={current} src={images[current]} alt="img" loading="lazy" decoding="async" className='w-full h-full object-cover animate-fade'/>
-        </div>
+    return (
+        <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: true }} className='relative w-full  max-w-200  h-100 overflow-hidden mx-auto my-40 '>
+                <div className=''>
+                        <motion.img key={current} src={images[current]} alt="img" loading="lazy" decoding="async" className='w-full h-full object-cover' initial={{ scale: 1.02 }} animate={{ scale: 1 }} transition={{ duration: 0.6 }} />
+                </div>
         <div className='absolute z-1 bottom-0  w-full   flex justify-between  top-1/2 -translate-y-1/2 items-center px-5'>
          <button onClick={prevImage} className='text-3xl text-white/80 bg-white/10 rounded-full h-10 w-10 text-center cursor-pointer hover:bg-white/30 duration-300 grid place-content-center'><IoIosArrowBack/></button>
          <button onClick={nextImage} className='text-3xl text-white/80 bg-white/10 rounded-full h-10 w-10 text-center cursor-pointer hover:bg-white/30 duration-300 grid place-content-center'><IoIosArrowForward/></button>
@@ -43,8 +44,8 @@ const Carousal_imgs = () => {
                     )
                 })
             }
-        </div>
-    </div>
+                </div>
+        </motion.div>
   )
 }
 

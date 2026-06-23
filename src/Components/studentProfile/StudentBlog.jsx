@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 import axios from "axios";
 
 const getImageFromContent = (content) => {
@@ -27,7 +28,7 @@ const StudentBlog = ({ username }) => {
   }, [username]);
   console.log(blog);
   return (
-    <div className="bg-black text-white pt-10">
+    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: true }} className="bg-black text-white pt-10">
       <div className="w-full max-w-7xl mx-auto bg-purple-400/10 p-10">
         <h1 className="text-3xl font-semibold mb-10">About Me</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5">
@@ -47,7 +48,7 @@ const StudentBlog = ({ username }) => {
             }
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

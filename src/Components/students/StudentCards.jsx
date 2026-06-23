@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { studentsData } from "../../datas/studentData";
 import { Link } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
-
+import {motion} from "framer-motion"
 const data = studentsData;
 
 const StudentCards = () => {
@@ -26,8 +26,8 @@ const StudentCards = () => {
       </div>
 
       <div className="w-full max-w-7xl  mx-auto grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 justify-between  gap-5 ">
-        {slicedData.map((data) => (
-          <StudentCard key={data.id} card={data} />
+        {slicedData.map((data,ind) => (
+          <StudentCard key={data.id} card={data} ind={ind}/>
         ))}
       </div>
       {/* pagination payaluga */}
@@ -59,9 +59,9 @@ const StudentCards = () => {
     </div>
   );
 };
-function StudentCard({ card }) {
+function StudentCard({ card ,ind}) {
   return (
-    <div className="border  border-border rounded-3xl overflow-hidden flex flex-col items-center justify-center w-full max-w-xs mx-auto hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.25)] transition-all duration-300">
+    <motion.div initial={{opacity:0,x:100}} whileInView={{opacity:1,x:0}} transition={{duration: 0.1,delay:ind*.15,ease:"easeInOut"}} viewport={{once:true,amount:0.2}}  className="border  border-border rounded-3xl overflow-hidden flex flex-col items-center justify-center w-full max-w-xs mx-auto hover:-translate-y-2 hover:border-cyan-500/50 hover:shadow-[0_0_25px_rgba(6,182,212,0.25)] transition-all duration-300">
       {/* cover */}
       <div className="w-full h-36">
         <img
@@ -119,7 +119,7 @@ function StudentCard({ card }) {
           View Profile
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

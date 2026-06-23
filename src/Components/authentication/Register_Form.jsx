@@ -1,11 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaRegUser } from "react-icons/fa";
 import { MdLockOutline, MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Register_Form = () => {
   return (
-    <div className="outer h-screen">
+    <motion.div initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: true }} className="outer h-screen">
       <div className="res ">
         <form
           action=""
@@ -59,7 +60,7 @@ const Register_Form = () => {
             </p>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

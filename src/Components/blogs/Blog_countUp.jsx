@@ -3,6 +3,7 @@ import CountUpLib from 'react-countup'
 const CountUp = CountUpLib.default || CountUpLib
 import {FaFileAlt,FaUsers,FaBookOpen,FaCommentDots,FaLayerGroup,
 } from "react-icons/fa";
+import {motion} from "framer-motion"
 
 const blogStats = [
   {
@@ -60,17 +61,17 @@ const Blog_countUp = () => {
     <div className='w-full  md:h-40 bg-black  border-b border-border'>
       <div className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5  px-8 mb-5'>
        {
-        blogStats.map(card=>(
-            <CountupCard key={card.id} number={card.number} label={card.label} icon={card.icon} suffix={card.suffix}/>
+        blogStats.map((card,ind)=>(
+            <CountupCard id={ind} key={card.id} number={card.number} label={card.label} icon={card.icon} suffix={card.suffix}/>
         ))
        }
       </div>
     </div>
   )
 }
-function CountupCard({number,label,icon,suffix}){
+function CountupCard({number,label,icon,suffix,id}){
     return(
-        <div className='border border-border rounded-xs p-3 md:p-7 '>
+        <motion.div initial={{opacity:0,y:50}} transition={{delay:id*0.15,type:"spring",stiffness:200}} whileInView={{opacity:1,y:0}} className='border border-border rounded-xs p-3 md:p-7 '>
             <div className='flex flex-row items-center gap-3 '>
                 {/* icon */}
                 <div className=''>
@@ -84,7 +85,7 @@ function CountupCard({number,label,icon,suffix}){
                   <span className='text-xs'>{label}</span>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

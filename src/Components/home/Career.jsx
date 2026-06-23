@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaUserFriends,FaUsers,FaPenNib,FaRobot,FaRocket,FaChartLine,
 } from "react-icons/fa";
+import {motion} from "framer-motion"
 
 const features = [
   {
@@ -64,16 +65,39 @@ const features = [
   },
 ];
 
+const variants={
+  initial:{},
+  whileInView:{
+    transition:{
+      staggerChildren:0.15
+    }
+  }
+}
+const comeUp={
+  initial:{
+    opacity:0,
+    y:20
+  },
+  whileInView:{
+    opacity:1,
+    y:0,
+    transition:{
+       duration:0.2, ease: "easeOut"
+    }
+  }
+}
+
+
 const Career = () => {
   return (
-    <div className='bg-gradient-to-br from-black via-[#050816] to-[#0A1022] py-10 '>
-        <div className=' w-full max-w-7xl mx-auto text-white'>
-           <p className='uppercase font-semibold text-primary text-center'>Why devsphere Ai?</p>
-           <h1 className='text-center text-4xl mt-3 font-extralight capitalize mb-20'>Everything You need <br /> to build your <span className='gradient-text'>Career</span></h1>
-           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+    <div  className='bg-gradient-to-br from-black via-[#050816] to-[#0A1022] py-10 '>
+        <motion.div variants={variants} initial="initial" whileInView="whileInView" viewport={{ once: true, amount: 0.2 }} className=' w-full max-w-7xl mx-auto text-white'>
+           <motion.p variants={comeUp} className='uppercase font-semibold text-primary text-center'>Why devsphere Ai?</motion.p>
+           <motion.h1 variants={comeUp} className='text-center text-4xl mt-3 font-extralight capitalize mb-20'>Everything You need <br /> to build your <span className='gradient-text'>Career</span></motion.h1>
+           <div  className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
              {
-                features.map(item=>(
-                  <div key={item.id} className='flex items-start mx-auto gap-4 rounded-2xl text-text-secondary border-2 border-border max-w-90 p-5 hover:shadow-[0_15px_40px_rgba(34,211,238,0.12)] hover:border-cyan-400/20 hover:bg-white/[0.02] transition-all duration-300 hover:scale-105'>
+                features.map((item,ind)=>(
+                  <motion.div initial={{opacity:0,x:100}} whileInView={{opacity:1,x:0}} transition={{duration: 0.1,delay:ind*.15,ease:"easeInOut"}} viewport={{once:true,amount:0.2}}  key={item.id} className='flex items-start mx-auto gap-4 rounded-2xl text-text-secondary border-2 border-border max-w-90 p-5 hover:shadow-[0_15px_40px_rgba(34,211,238,0.12)] hover:border-cyan-400/20 hover:bg-white/[0.02] transition-all duration-300 hover:scale-105'>
                         {/* icon */}
                         <div>
                             <item.icon className={`${item.color} text-5xl p-2 rounded-lg `}/>
@@ -83,11 +107,11 @@ const Career = () => {
                             <h2 className='text-white font-semibold'>{item.title}</h2>
                             <h3 className='text-text-muted text-sm'>{item.description}</h3>
                         </div>
-                    </div>
+                    </motion.div>
                 ))
              }
            </div>
-        </div>
+        </motion.div>
     </div>
   )
 }

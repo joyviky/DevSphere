@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import {
   FaUsers,
   FaBookOpen,
@@ -61,7 +62,7 @@ const platformFeatures = [
 ];
 const DeveloperSection = () => {
   return (
-    <div className="outer">
+    <motion.div initial={{ opacity: 0, y: 150 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true ,amount:0.2}} className="outer">
       <div className="res">
         <div className="mb-15">
           <h1 className="text-2xl text-center md:text-4xl lg:text-5xl">
@@ -101,7 +102,7 @@ const DeveloperSection = () => {
           <img src={earth} alt="" className="w-150 justify-end" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

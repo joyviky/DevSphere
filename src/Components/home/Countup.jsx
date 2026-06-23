@@ -2,7 +2,7 @@ import React from 'react'
 import CountUpLib from 'react-countup'
 const CountUp = CountUpLib.default || CountUpLib
 import { FaUsers, FaFolder, FaFileAlt, FaUniversity } from "react-icons/fa";
-
+import {motion} from 'framer-motion'
 
 const details = [
   {
@@ -32,22 +32,24 @@ const details = [
 }
 ];
 
+
+
 const Countup = () => {
   return (
     <div className='w-full md:h-40 bg-black  border-b border-border'>
       <div className='max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 px-8 mb-5 md:mb-0'>
        {
         details.map(card=>(
-            <CountupCard key={card.id} number={card.number} label={card.label} icon={card.icon}/>
+            <CountupCard key={card.id} number={card.number} label={card.label} icon={card.icon} id={card.id}/>
         ))
        }
       </div>
     </div>
   )
 }
-function CountupCard({number,label,icon}){
+function CountupCard({number,label,icon,id}){
     return(
-        <div className='border border-border rounded-xs p-3 md:p-7 '>
+        <motion.div initial={{opacity:0,y:30}} transition={{delay:id*0.15,type:"spring",stiffness:200}} whileInView={{opacity:1,y:0}} className='border border-border rounded-xs p-3 md:p-7 '>
             <div className='flex flex-row items-center gap-3 '>
                 {/* icon */}
                 <div className=''>
@@ -55,13 +57,13 @@ function CountupCard({number,label,icon}){
                 </div>
                 {/* content */}
                 <div className='flex flex-col text-text-secondary'>
-                  <span className='text-4xl'>
-                    <CountUp end={number} duration={2} enableScrollSpy scrollSpyOnce/>+
-                  </span>
+                  <motion.span initial={{scale:0.7}} whileInView={{scale:1}} transition={{duration:1,type:"spring"}} className='text-4xl'>
+                    <CountUp end={number} duration={5} enableScrollSpy scrollSpyOnce/>+
+                  </motion.span>
                   <span className='text-sm'>{label}</span>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

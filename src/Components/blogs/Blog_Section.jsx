@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { motion } from 'framer-motion'
 import axios from "axios";
 import { studentProfile } from "../../datas/studentData";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Loading from "../Loading"
 
 function NextArrow({ onClick }) {
   return (
@@ -95,10 +97,10 @@ const Blog_Section = () => {
   const firstIndex = lastIndex - blogsPerPage;
   const slicedBlogs = remainingBlogs.slice(firstIndex, lastIndex);
   return (
-    <div className="outer">
+    <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: true }} className="outer">
       <div className="res">
-        {loading ? (
-          <h1>Loading...</h1>
+        {loading ?(
+          <Loading/>
         ) : (
           <div>
             {/* left five blogs */}
@@ -205,15 +207,23 @@ const Blog_Section = () => {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 function FirstFiveBlogs({ blogs }) {
-  let Fiveblogs = blogs.slice(0, 5);
+   const Fiveblogs = blogs.slice(0, 5);
+
   const [currentBlog, setCurrentBlog] = useState(0);
+  useEffect(() => {
+    const timer=setInterval(()=>{
+        setCurrentBlog((cur) => (cur + 1) % Fiveblogs.length);
+    },5000);
+    return ()=>clearInterval(timer);
+  }, [Fiveblogs.length]);
+ 
   if (Fiveblogs.length === 0) {
-    return <h1>Loading blogs...</h1>;
+    return <Loading/>;
   }
   const nextBlog = () => {
     setCurrentBlog((next) => (next + 1) % Fiveblogs.length);
@@ -224,12 +234,6 @@ function FirstFiveBlogs({ blogs }) {
   const current = Fiveblogs[currentBlog];
 
   const image = current.thumbnail || getImageFromContent(current.content);
-   useEffect(() => {
-    const timer=setInterval(()=>{
-        setCurrentBlog((cur) => (cur + 1) % Fiveblogs.length);
-    },5000);
-    return ()=>clearInterval(timer);
-  }, [Fiveblogs.length]);
  
   
   return (

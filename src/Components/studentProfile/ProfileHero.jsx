@@ -9,11 +9,36 @@ import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 import mount from "../../assets/authenticationImg/mount1.png";
 import { useNavigate } from "react-router-dom";
+import {motion} from "framer-motion"
 
+
+const containerVariants={
+  initial:{},
+  animate:{
+    transition:{
+    staggerChildren:0.20
+  }
+  },
+  
+}
+const fadeBlurUp={
+  initial:{
+    opacity:0,
+    y:20,
+    filter:"blur(5px)"
+  },
+  animate:{
+    opacity:1,
+    y:0,
+    filter:"blur(0px)",
+    transition:{duration:0.5,ease:"easeOut"}
+  },
+  
+}
 const ProfileHero = ({ student,id }) => {
   const navigate=useNavigate();
   return (
-    <div className="relative w-full  py-10 text-white overflow-hidden">
+    <motion.div variants={containerVariants} initial="initial" whileInView="animate"   viewport={{ once: true, amount: 0.2 }}  className="relative w-full  py-10 text-white overflow-hidden">
       {/* Blurred Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center blur-[5px] scale-110"
@@ -31,7 +56,7 @@ const ProfileHero = ({ student,id }) => {
 
         <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start my-10">
           <div>
-            <img
+            <motion.img initial={{ opacity: 0,scale:0.8}} whileInView={{opacity:1,scale:1}} transition={{duration:0.5,ease: "easeOut"}} viewport={{once:true,amount:0.2}}
               className="rounded-full w-50 h-50 object-cover border border-primary"
               src={student.image}
               alt={student.name}
@@ -39,11 +64,11 @@ const ProfileHero = ({ student,id }) => {
           </div>
 
           <div className="flex flex-col gap-3">
-            <h1 className="text-4xl capitalize font-bold">{student.name}</h1>
+            <motion.h1 variants={fadeBlurUp}  className="text-4xl capitalize font-bold">{student.name}</motion.h1>
 
-            <h2 className="text-sm text-secondary-hover">{student.role}</h2>
+            <motion.h2 variants={fadeBlurUp}  className="text-sm text-secondary-hover">{student.role}</motion.h2>
 
-            <div className="flex flex-wrap gap-8">
+            <motion.div variants={fadeBlurUp}  className="flex flex-wrap gap-8">
               <p className="flex items-center text-sm gap-2">
                 <IoLocationOutline className="text-2xl text-primary" />
                 {student.location}
@@ -58,9 +83,9 @@ const ProfileHero = ({ student,id }) => {
                 <FaLink className="text-2xl text-primary" />
                 Portfolio
               </a>
-            </div>
+            </motion.div>
 
-            <div className="flex gap-5 text-2xl mt-10">
+            <motion.div variants={fadeBlurUp}  className="flex gap-5 text-2xl mt-10">
               <a
                 href={student.github}
                 target="_blank"
@@ -76,23 +101,25 @@ const ProfileHero = ({ student,id }) => {
               >
                 <IoLogoLinkedin />
               </a>
-            </div>
+            </motion.div>
 
-            <div className="mt-1 flex flex-wrap gap-4">
+            <motion.div variants={fadeBlurUp}  className="mt-1 flex flex-wrap gap-4">
               <button onClick={()=>{navigate(`/students/${id}/std_edit`)}} className="bg-primary px-5 py-2 rounded-md cursor-pointer text-black text-lg font-medium">
                 <MdEdit className="inline-block text-2xl mr-2" />
                 Edit Profile
               </button>
 
-              <button className="px-5 py-2 rounded-md cursor-pointer border-2 border-primary text-lg">
+              <a href={`${student.resume}`} download target="_blank" >
+                <button className="px-5 py-2 rounded-md cursor-pointer border-2 border-primary text-lg">
                 <FaCloudDownloadAlt className="inline-block text-2xl mr-2" />
                 Download Resume
               </button>
-            </div>
+              </a>
+            </motion.div>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

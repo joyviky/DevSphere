@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { studentProfile } from "../../datas/studentData";
 import {
   FaCheckCircle,
@@ -29,7 +30,7 @@ const Std_EditForm = ({ id }) => {
   const student = studentProfile.find((item) => item.id === Number(id));
   console.log(student);
   return (
-    <div className="outer">
+    <motion.div initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} viewport={{ once: true }} className="outer">
       <div className="res">
         <div className="flex flex-col lg:flex-row">
           {/* left form */}
@@ -47,7 +48,7 @@ const Std_EditForm = ({ id }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 function PersonalInformation({ student }) {

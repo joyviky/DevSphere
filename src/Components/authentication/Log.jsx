@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import github from '../assets/github.png'
 import google from '../assets/google.jpg'
 import linkedin from '../assets/linkedin.png'
@@ -6,8 +7,11 @@ import person from '../assets/person.png'
 
 const Login = () => {
   return (
-    <div
-      className="
+    <motion.div  initial={{ opacity: 0, x: -120 }}  initial={{ opacity: 0, x: -60 }} transition={{ duration: 1 }} viewport={{ once: true }}
+    className=""
+    >
+      <div
+        className="
         min-h-screen
         bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#06061c]
         flex flex-col md:flex-row
@@ -15,7 +19,7 @@ const Login = () => {
         gap-12
         px-6 md:px-16
       "
-    >
+      >
       <div className="text-white max-w-md text-center md:text-left">
         <h1 className="text-3xl md:text-4xl font-bold mb-3">
           Welcome Back!
@@ -111,7 +115,7 @@ const Login = () => {
           </span>
         </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
